@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chris Chan</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+    </style>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="indexHeroContainer">
+      <div class="navbar" id="topNavbar">
+        <a href="index.html" class="pageTitle">chris chan</a>
+        <div class="mobileNavBorder"></div>
+        <div class="navBorder"></div>
+        <ul>
+          <li><a href="index.html" class="active">my work</a></li>
+          <li><a href="contact.html">contact</a></li>
+          <li><a href="about.html">about</a></li>
+          <li>
+            <a
+              href="javascript:void(0);"
+              class="hamburger"
+              onclick="hamburger()"
+            >
+              <i class="fa fa-bars"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="flexHero">
+        <div class="flexHeroLeft">
+          <div class="bio">
+            <h1>👻 - Hey, I'm Chris!</h1>
+            <h1>
+              I’m a UX/UI design student with a background in computer science,
+              learning and working to design fun and useful experiences for
+              users.
+            </h1>
+          </div>
+          <div class="bgSelect">
+            <p>select a background to fit your mood. or don't 🤷‍♂️</p>
+            <div class="images">
+              <a id="bg1"><img src="img/bg1.jpg" alt="background1" /></a>
+              <a id="bg2"><img src="img/bg2.jpg" alt="background2" /></a>
+              <a id="bg3"><img src="img/bg3.jpg" alt="background3" /></a>
+            </div>
+          </div>
+        </div>
+        <div class="flexHeroRight">
+          <a href="about.html"
+            ><img class="chrisImg" src="img/chris2_4-5.jpg" alt="chris4/5"
+          /></a>
+          <div class="scrollContainer">
+            <div class="scrollBanner">
+              &#129310; currently seeking fall 2023 internships!
+            </div>
+          </div>
+        </div>
+        <div class="mobileScrollTip">
+          <!-- <p>SCROLL</p> -->
+          <img src="img/icons/chevron-down.svg" alt="down_arrow" />
+        </div>
+      </div>
+    </div>
+    <div class="projectGalleryGrid">
+      <h1 class="sectionHeader">My Work.</h1>
+
+      <a href="burb.html" class="projectCardLink">
+        <div class="projectCard active">
+          <img src="img/burb/burb.jpg" alt="burbHero" />
+          <div class="projDetails">
+            <h3>Burb</h3>
+            <h4>Summer 2021</h4>
+            <p>Digital shopping experience</p>
+            <p class="seeMore">See More ></p>
+          </div>
+        </div>
+      </a>
+
+      <a href="doubleclub.html" class="projectCardLink">
+        <div class="projectCard active">
+          <img src="img/doubleclub/double.jpg" alt="doubleClubHero" />
+          <div class="projDetails">
+            <h3>Double Club Miami</h3>
+            <h4>Summer 2021</h4>
+            <p>Nightclub Ticketing Process</p>
+            <p class="seeMore">See More ></p>
+          </div>
+        </div>
+      </a>
+
+      <div class="projectCard notActive">
+        <img src="img/hoochybooch/hoochybooch.jpg" alt="hoochyBoochHero" />
+        <div class="projDetails">
+          <h3>Hoochy' Booch</h3>
+          <h4>Fall 2022</h4>
+          <p>E-commerce website evaluation</p>
+          <p class="seeMore">Coming Soon!</p>
+        </div>
+      </div>
+      <!-- 
+        <div class="projectCard notActive">
+          <img src="img/nissan/nissan_hero.jpg" alt="">
+          <div class="projDetails">
+            <h3>Critical Mass Internship</h3>
+            <h4>Summer 2022</h4>
+            <p>Nissan USA UX</p>
+            <p class="seeMore">Coming Soon!</p>
+          </div>
+        </div>
+
+        <div class="projectCard notActive">
+          <img src="img/nissan/nissan_hero.jpg" alt="">
+          <div class="projDetails">
+            <h3>Critical Mass Internship</h3>
+            <h4>Summer 2022</h4>
+            <p>Nissan USA UX</p>
+            <p class="seeMore">Coming Soon!</p>
+          </div>
+        </div> -->
+    </div>
+
+    <footer>
+      <a href="index.html" class="pageTitle">chris chan</a>
+      <div class="navLinks">
+        <ul>
+          <li><a href="index.html" class="active">my work</a></li>
+          <li><a href="contact.html">contact</a></li>
+          <li><a href="about.html">about</a></li>
+        </ul>
+      </div>
+      <div class="socials">
+        <a
+          target="_blank"
+          href="mailto:chaanchriis@gmail.com?subject=Chat&#160;with&#160;Chris"
+          ><img src="img/icons/envelope-solid.svg" alt="email"
+        /></a>
+        <a target="_blank" href="https://www.linkedin.com/in/chaanchriis/"
+          ><img src="img/icons/linkedin.svg" alt="linkedin"
+        /></a>
+        <a href="styleguide.html"
+          ><img src="img/icons/brush-solid.svg" alt="styleGuide"
+        /></a>
+        <a href="https://github.com/chrixchann/p03_portfolio"
+          ><img src="img/icons/github.svg" alt="github"
+        /></a>
+      </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
