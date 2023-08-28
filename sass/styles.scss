@@ -183,6 +183,11 @@ body,
   white-space: nowrap;
 }
 
+.pageTitle:hover {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px;
+}
+
 /* navbar links */
 .navbar ul li a {
   font-size: 1.1em;
@@ -440,8 +445,8 @@ footer .socials {
   font-size: 10em;
   text-align: center;
   width: 100%;
-  border-bottom: 2px dashed var(--off-black);
-  border-top: 2px dashed var(--off-black);
+  // border-bottom: 2px dashed var(--off-black);
+  // border-top: 2px dashed var(--off-black);
   color: var(--off-black);
   margin-top: 0;
   margin-bottom: 0.5em;
@@ -456,6 +461,7 @@ footer .socials {
   width: 100%;
   justify-content: center;
   padding: 2em;
+  margin-bottom: 3em;
   border: 1px solid var(--faded-text);
   border-radius: 8px;
 }
