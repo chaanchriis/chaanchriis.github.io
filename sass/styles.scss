@@ -717,6 +717,7 @@ textarea {
   flex-direction: column;
   gap: 3em;
   border-bottom: 1px solid #eee;
+  max-width: 1050px;
 }
 
 .writeUp img {
@@ -768,10 +769,12 @@ textarea {
   h1,
   h3 {
     width: 100%;
+
+    margin-bottom: 0;
   }
 }
 
-.projSection p {
+.projSection .commentPara {
   width: 60%;
   margin: 0;
   margin-bottom: 1.5em;
