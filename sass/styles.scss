@@ -205,6 +205,7 @@ body,
 
 .navbar a.active {
   font-weight: 600;
+  // color: var(--lightish-blue);
 }
 
 .flexHero {
@@ -841,11 +842,19 @@ textarea {
   color: white;
 }
 
+.boochHeroContainer {
+  background: {
+    image: url("../img/hoochybooch/heroBg.png");
+  }
+  @include heroBGImg();
+  color: white;
+}
+
 /************************** ANIMATIONS ************************/
 
-.navbar ul li:hover,
-.nextProject a:hover {
+.navbar ul li:hover {
   text-decoration: underline;
+  color: var(--lightish-blue);
 }
 
 .burbHeroContainer .navbar ul li:hover {
