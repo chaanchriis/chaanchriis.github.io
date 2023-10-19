@@ -776,7 +776,7 @@ textarea {
 
 .projSection .commentPara {
   width: 60%;
-  margin: 0;
+
   margin-bottom: 1.5em;
 }
 
@@ -784,9 +784,10 @@ textarea {
   border-left: 4px solid var(--lightish-blue);
   width: 30%;
   margin-left: auto;
-
+  height: fit-content;
   font-size: 18px;
   padding-left: 1em;
+  margin-top: 1em;
 }
 
 .projSection .comments p {
@@ -1204,6 +1205,10 @@ footer ul li a:hover {
   .nextProject {
     padding-left: 0.7em;
     padding-right: 0.7em;
+  }
+
+  .projSection .commentPara {
+    width: 100%;
   }
 }
 
