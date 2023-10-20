@@ -50,7 +50,7 @@
 .writeUp img {
   border: solid {
     radius: 0.2em;
-    color: var(--border-color);
+    color: var(--lightish-blue);
     width: 0.01em;
   }
 }
@@ -315,7 +315,7 @@ body,
 }
 
 .projectGalleryGrid {
-  /* width: 100%; */
+  // width: 100%;
   margin-top: 3.5em;
   padding-bottom: 7em;
   display: grid;
@@ -715,7 +715,7 @@ textarea {
   padding-right: 4em;
   display: flex;
   flex-direction: column;
-  gap: 3em;
+
   border-bottom: 1px solid #eee;
   max-width: 1050px;
 }
@@ -726,6 +726,7 @@ textarea {
 
 .writeUp p {
   line-height: 1.4em;
+  font-size: 0.85em;
 }
 
 .flexElement {
@@ -738,7 +739,7 @@ textarea {
 .projInfoList {
   display: flex;
   flex-direction: column;
-  padding-bottom: 2em;
+  margin-bottom: 3em;
   /* border-bottom: 2px solid var(--row-color); */
 }
 
@@ -757,12 +758,14 @@ textarea {
 .projInfo p {
   padding-top: 5px;
   vertical-align: text-bottom;
+  font-size: 1em;
 }
 
 .projSection {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  margin-bottom: 3em;
 }
 
 .projSection {
@@ -800,10 +803,43 @@ textarea {
   color: var(--lightish-blue);
 }
 
-.projGrid {
+.projImgGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.5em;
+}
+.imgCaption {
+  margin-top: 0.2em;
+  font-size: 0.8em;
+  margin-left: auto;
+  color: var(--lightish-blue);
+}
+
+.projImgColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.gridContainer3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5em;
+  color: var(--lightish-blue);
+}
+
+.colContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.colContainer h5 {
+  color: var(--lightish-blue);
+  margin-top: 0.5em;
+  margin-bottom: 0;
+}
+
+.colContainer p {
+  margin-top: 0.3em;
 }
 
 /**************************** BURB *****************************/
@@ -1067,11 +1103,19 @@ footer ul li a:hover {
   .projectGalleryGrid {
     grid-template-columns: repeat(1, 1fr);
   }
+  .projImgGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
 }
 
 @media only screen and (max-width: 750px) {
   .about .flexHero {
     flex-direction: column;
+  }
+  .gridContainer3 {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -1231,6 +1275,13 @@ footer ul li a:hover {
   // }
   .bgSelect {
     display: none;
+  }
+  .gridContainer3 {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0;
+  }
+  .gridContainer3 h4 {
+    margin-top: 0;
   }
 }
 
