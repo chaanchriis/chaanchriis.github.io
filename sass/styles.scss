@@ -842,6 +842,14 @@ textarea {
   margin-top: 0.3em;
 }
 
+.centerQuote {
+  text-align: center;
+  padding: 2em;
+  border: dashed var(--lightish-blue) 2px;
+  border-radius: 1em;
+  color: #ff1391;
+}
+
 /**************************** BURB *****************************/
 .burbHeroContainer {
   background: {
