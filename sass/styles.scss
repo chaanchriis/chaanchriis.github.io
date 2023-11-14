@@ -100,8 +100,8 @@ body::-webkit-scrollbar {
 }
 
 .body {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 body,
@@ -340,6 +340,38 @@ body,
   color: var(--off-black);
 }
 
+.projectCardHome {
+  background-color: white;
+  font-family: "Poppins";
+  display: flex;
+  flex-direction: column;
+  @include defBorder();
+  height: 30em;
+  width: 100%;
+  overflow: hidden;
+  -webkit-transition: 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  transition: 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.projectCard .projDetails {
+  flex-basis: 55%;
+  display: flex;
+  flex-direction: column;
+  /* width: 100%; */
+  padding: 0.4em 1.5em 2em 1.7em;
+
+  /* position: relative;
+  left: -4em; */
+}
+
+.projectCardHome img {
+  height: 100%;
+  flex-basis: 75%;
+  object-fit: cover;
+  width: 100%;
+}
+
 .projectCard {
   background-color: white;
   font-family: "Poppins";
@@ -375,6 +407,17 @@ body,
   gap: 10px;
 }
 
+.projectCardHome .projDetails {
+  flex-basis: 25%;
+  display: flex;
+  flex-direction: column;
+  /* width: 100%; */
+  padding: 0.4em 1.5em 2em 1.7em;
+
+  /* position: relative;
+  left: -4em; */
+}
+
 .projectCard .projDetails {
   flex-basis: 55%;
   display: flex;
@@ -386,19 +429,27 @@ body,
   left: -4em; */
 }
 
-.projectCard h3 {
+.projDetailsHeader {
+  display: flex;
+  flex-direction: row;
+}
+
+.projectCard h3,
+.projectCardHome h3 {
   font-size: 1.3em;
   font-weight: 600;
   margin-bottom: 0;
 }
 
-.projectCard h4 {
+.projectCard h4,
+.projectCardHome h4 {
   font-size: 1em;
   font-weight: 500;
   margin-top: 0.4em;
 }
 
-.projectCard p {
+.projectCard p,
+.projectCardHome p {
   margin: 0;
 }
 .categories {
@@ -408,6 +459,13 @@ body,
 
 .projectCard .seeMore {
   margin-top: auto;
+  color: var(--lightish-blue);
+  text-decoration: none;
+}
+
+.projectCardHome .seeMore {
+  margin-top: 1.5em;
+  margin-left: auto;
   color: var(--lightish-blue);
   text-decoration: none;
 }
@@ -854,6 +912,8 @@ textarea {
 }
 
 .centerQuote {
+  font-size: 1.3em;
+  font-weight: 600;
   text-align: center;
   padding: 2em;
   border: dashed var(--lightish-blue) 2px;
@@ -954,12 +1014,14 @@ footer ul li a:hover {
   }
 }
 
+.projectCardHome.active:hover,
 .projectCard.active:hover,
 .bgSelect img:hover,
 .chrisImg:hover {
   transform: translateY(-0.3em);
 }
 
+.projectCardHome.active:hover .seeMore,
 .projectCard.active:hover .seeMore {
   font-weight: 500;
 }
@@ -986,13 +1048,13 @@ footer ul li a:hover {
 @supports (-moz-appearance: meterbar) {
   @media only screen and (min-width: 1280px) {
     .navBorder {
-      right: calc(4.85em + (100vw - 1280px) / 2);
+      right: calc(4.9em + (100vw - 1280px) / 2);
     }
   }
 }
 @media only screen and (min-width: 1280px) {
   .navBorder {
-    right: calc(4.85em + (100vw - 1280px) / 2);
+    right: calc(4.9em + (100vw - 1280px) / 2);
   }
 }
 
