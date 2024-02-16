@@ -8,6 +8,7 @@
   --row-color: #e3e3ee;
   --off-black: #353535;
   --lightish-blue: #006ae6;
+  --light-grey-border: #d3d3d3;
 }
 
 // MIXINS
@@ -50,8 +51,8 @@
 .writeUp img {
   border: solid {
     radius: 0.2em;
-    color: var(--lightish-blue);
-    width: 0.01em;
+    color: var(--light-grey-border);
+    width: 0.1em;
   }
 }
 
@@ -135,6 +136,7 @@ body,
   }
   @include heroBGImg;
   color: white;
+  // border-bottom: 1px solid #353535;
 }
 
 .aboutHeroContainer {
@@ -217,6 +219,13 @@ body,
 .navbar a.active {
   font-weight: 600;
   // color: var(--lightish-blue);
+}
+
+.tagline {
+  background: url(/img/bg1.jpg) 0 0 / cover no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3em;
 }
 
 .flexHero {
@@ -483,14 +492,14 @@ body,
 .projectCard .seeMore {
   margin-top: auto;
   color: var(--lightish-blue);
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .projectCardHome .seeMore {
   margin-top: 1.5em;
   margin-left: auto;
   color: var(--lightish-blue);
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 footer {
