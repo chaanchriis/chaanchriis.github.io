@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chris chan: Visualizations</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="img/icons/github.svg" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+    </style>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="aboutHeroContainer">
+      <div class="navbar" id="topNavbar">
+        <a href="index.html" class="pageTitle">chris chan</a>
+        <div class="mobileNavBorder"></div>
+        <div class="navBorder"></div>
+        <ul>
+          <li><a href="index.html">my work</a></li>
+          <li><a href="contact.html" class="active">contact</a></li>
+          <li><a href="about.html">about</a></li>
+          <li>
+            <a
+              href="javascript:void(0);"
+              class="hamburger"
+              onclick="hamburger()"
+            >
+              <i class="fa fa-bars"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="flexHero">
+        <h2 class="styleguideHeader">Visualizations</h2>
+      </div>
+    <div class="writeUp">
+        <div class="projectCard notActive">
+            <svg width="300px" height="500px">
+                <rect x="10" y="200" height="100" width="25" fill="blue">
+              </svg>
+            <div class="projDetails">
+              <!-- <p class="categories">EVALUATION</p> -->
+              <h3>I enjoy skiing.</h3>
+              <br />
+              <p>
+                I love winter sports and skiing is one of my favourites along with
+                hockey.
+              </p>
+            </div>
+          </div>
+          <svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+            <!-- Axes -->
+            <line x1="50" y1="250" x2="350" y2="250" stroke="black" stroke-width="2"/> <!-- X-axis -->
+            <line x1="50" y1="250" x2="50" y2="50" stroke="black" stroke-width="2"/>  <!-- Y-axis -->
+          
+            <!-- Labels for X-axis -->
+            <text x="60" y="270" font-size="12" text-anchor="middle">Bar 1</text>
+            <text x="110" y="270" font-size="12" text-anchor="middle">Bar 2</text>
+            <text x="160" y="270" font-size="12" text-anchor="middle">Bar 3</text>
+            <text x="210" y="270" font-size="12" text-anchor="middle">Bar 4</text>
+            <text x="260" y="270" font-size="12" text-anchor="middle">Bar 5</text>
+            <text x="310" y="270" font-size="12" text-anchor="middle">Bar 6</text>
+          
+            <!-- Labels for Y-axis -->
+            <text x="20" y="50" font-size="12" text-anchor="middle">100</text>
+            <text x="20" y="150" font-size="12" text-anchor="middle">50</text>
+            <text x="20" y="250" font-size="12" text-anchor="middle">0</text>
+          
+            <!-- Bars -->
+            <rect x="60" y="150" width="40" height="100" fill="blue"/>  <!-- Bar 1 -->
+            <rect x="110" y="100" width="40" height="150" fill="green"/> <!-- Bar 2 -->
+            <rect x="160" y="130" width="40" height="120" fill="red"/>   <!-- Bar 3 -->
+            <rect x="210" y="180" width="40" height="70" fill="orange"/> <!-- Bar 4 -->
+            <rect x="260" y="120" width="40" height="130" fill="purple"/> <!-- Bar 5 -->
+            <rect x="310" y="90" width="40" height="160" fill="cyan"/>   <!-- Bar 6 -->
+          </svg>
+    </div>
+    </div>
+    <footer>
+      <a href="index.html" class="pageTitle">chris chan</a>
+      <div class="navLinks">
+        <ul>
+          <li><a href="index.html" class="active">my work</a></li>
+          <li><a href="contact.html" class="active">contact</a></li>
+          <li><a href="about.html">about</a></li>
+        </ul>
+      </div>
+      <!-- <div >
+           <p>Email me at <span class="footerEmail"> chaanchriis@gmail.com 📧 </span></p>
+         </div>
+         OR
+         <div class="footerLinkedin">
+           <p>DM me on </p>
+           <a href="https://www.linkedin.com/in/chaanchriis/">LinkedIn</a>
+         </div> -->
+      <div class="socials">
+        <a
+          target="_blank"
+          href="mailto:chaanchriis@gmail.com?subject=Chat&#160;with&#160;Chris"
+          ><img src="img/icons/envelope-solid.svg" alt="email"
+        /></a>
+        <a target="_blank" href="https://www.linkedin.com/in/chaanchriis/"
+          ><img src="img/icons/linkedin.svg" alt="linkedin"
+        /></a>
+        <a href="styleguide.html"
+          ><img src="img/icons/brush-solid.svg" alt="style guide"
+        /></a>
+      </div>
+    </footer>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
