@@ -42,7 +42,7 @@
       <div class="writeUp">
         <div class="projectCard notActive">
           <!-- SVG Bar Chart taken from ChatGPT prompt, edited to copy my visualization -->
-          <svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+          <svg width="400" height="350" xmlns="http://www.w3.org/2000/svg">
             <!-- Axes -->
             <line
               x1="50"
@@ -96,6 +96,20 @@
             <p>From 1978 - 2021</p>
           </div>
         </div>
+        <div class="projectCard notActive">
+          <!-- SVG Bar Chart taken from ChatGPT prompt, edited to copy my visualization -->
+          <svg
+            id="vis"
+            width="400"
+            height="350"
+            xmlns="http://www.w3.org/2000/svg"></svg>
+          <div class="projDetails">
+            <!-- <p class="categories">EVALUATION</p> -->
+            <h3>Number of new UNESCO World Heritage Sites per decade</h3>
+            <br />
+            <p>From 1978 - 2021</p>
+          </div>
+        </div>
       </div>
     </div>
     <footer>
@@ -130,5 +144,6 @@
       </div>
     </footer>
     <script src="js/scripts.js"></script>
+    <script src="js/vis.js"></script>
   </body>
 </html>
