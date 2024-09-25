@@ -4,6 +4,7 @@ const svg = document.getElementById("vis");
 // Example: Draw a simple circle in the SVG
 const colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
 
+//My attempt at making a parabola of circles to be displayed in a rainbow
 for (let i = 0; i < colors.length; i++) {
   const circle = document.createElementNS(
     "http://www.w3.org/2000/svg",
