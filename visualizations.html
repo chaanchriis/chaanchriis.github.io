@@ -8,6 +8,37 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="icon" href="img/icons/github.svg" />
 
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite-api@5.6.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-tooltip"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        
+     const options = {
+        config: {
+          // Vega-Lite default configuration
+        },
+        init: (view) => {
+          // initialize tooltip handler
+          view.tooltip(new vegaTooltip.Handler().call);
+        },
+        view: {
+          // view constructor options
+          // remove the loader if you don't want to default to vega-datasets!
+          loader: vega.loader({
+            baseURL: "https://cdn.jsdelivr.net/npm/vega-datasets@2/",
+          }),
+          renderer: "canvas",
+        },
+      };
+
+      // register vega and vega-lite with the API
+      vl.register(vega, vegaLite, options);
+      </script>
+
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
     </style>
@@ -110,6 +141,21 @@
             <p>From 1978 - 2021</p>
           </div>
         </div>
+        <div class="projectCard notActive">
+            <!-- SVG Bar Chart taken from ChatGPT prompt, edited to copy my visualization -->
+            <div
+              id="vis1"
+              width="400"
+              height="350"
+              ></div>
+            
+            <div class="projDetails">
+              <!-- <p class="categories">EVALUATION</p> -->
+              <h3>Number of new UNESCO World Heritage Sites per decade</h3>
+              <br />
+              <p>From 1978 - 2021</p>
+            </div>
+          </div>
       </div>
     </div>
     <footer>
