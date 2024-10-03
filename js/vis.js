@@ -36,6 +36,7 @@ for (let i = 0; i < colors.length; i++) {
 async function render() {
   // load data
   const data = await d3.csv("./datasets/videogames_wide.csv");
+  // const dataLong = await d3.csv("./datasets/videogames_wide.csv");
 
   // create a bar chart
   const vlSpec = vl
@@ -49,7 +50,85 @@ async function render() {
     .height(400)
     .toSpec();
 
+  const vlSpec2 = vl
+    .markLine()
+    .title("Global Sales of Genres from 1980 - 2020")
+    .data(data)
+    .encode(
+      vl.y().fieldQ("Global_Sales").aggregate("sum"),
+      vl.x().fieldQ("Year").title("Years"),
+      vl.color().fieldN("Genre")
+    )
+    .width("container")
+    .height(400)
+    .toSpec();
+
+  const vlSpec3 = vl
+    .markLine()
+    .title("Global Sales of Platforms from 1980 - 2020")
+    .data(data)
+    .encode(
+      vl.y().fieldQ("Global_Sales").aggregate("sum"),
+      vl.x().fieldQ("Year").title("Years"),
+      vl.color().fieldN("Platform")
+    )
+    .width("container")
+    .height(400)
+    .toSpec();
+  
+  const vlSpec4 = vl
+    .markLine()
+    .title("Global Sales of Publishers from 1980 - 2020")
+    .data(data)
+    .encode(
+      vl.y().fieldQ("Global_Sales").aggregate("sum"),
+      vl.x().fieldQ("Year").title("Years"),
+      vl.color().fieldN("Publisher")
+    )
+    .width("container")
+    .height(400)
+    .toSpec();
+
+  const vlSpec5 = vl
+    .markBar()
+    .title("Regional Sales for PS2")
+    .data(data)
+    .encode(
+      vl.y().fieldQ("NA_Sales").stack("EU_Sales"),
+      vl.x().fieldN("Platform"),
+      vl.color().fieldQ("NA_Sales"),
+      vl.color().fieldQ("EU_Sales"),
+      vl.color().fieldQ("JP_Sales"),
+      vl.color().fieldQ("Other_Sales")
+    )
+    .width("container")
+    .height(400)
+    .toSpec();
+
+    // PS2, Wii, X360
+    // NA_Sales,EU_Sales,JP_Sales,Other_Sales
+
   vegaEmbed("#vis1", vlSpec).then((result) => {
+    const view = result.view;
+    view.run();
+  });
+
+  vegaEmbed("#vis2", vlSpec2).then((result) => {
+    const view = result.view;
+    view.run();
+  });
+
+  vegaEmbed("#vis3", vlSpec3).then((result) => {
+    const view = result.view;
+    view.run();
+  });
+
+  vegaEmbed("#vis4", vlSpec4).then((result) => {
+    const view = result.view;
+    view.run();
+  });
+
+  vegaEmbed("#vis5", vlSpec5).then((result) => {
     const view = result.view;
     view.run();
   });
