@@ -30,7 +30,6 @@ for (let i = 0; i < colors.length; i++) {
   svg.appendChild(circle);
 }
 
-
 // Create and render the bar chart
 // async function to load data from datasets/videogames_long.csv using d3.csv and then make visualizations
 async function render() {
@@ -73,9 +72,9 @@ async function render() {
       vl.color().fieldN("Platform")
     )
     .width("container")
-    .height(400)
+    .height(500)
     .toSpec();
-  
+
   const vlSpec4 = vl
     .markLine()
     .title("Global Sales of Publishers from 1980 - 2020")
@@ -105,8 +104,8 @@ async function render() {
     .height(400)
     .toSpec();
 
-    // PS2, Wii, X360
-    // NA_Sales,EU_Sales,JP_Sales,Other_Sales
+  // PS2, Wii, X360
+  // NA_Sales,EU_Sales,JP_Sales,Other_Sales
 
   vegaEmbed("#vis1", vlSpec).then((result) => {
     const view = result.view;
