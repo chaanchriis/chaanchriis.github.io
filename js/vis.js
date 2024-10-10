@@ -56,20 +56,22 @@ async function render() {
     .encode(
       vl.y().fieldQ("Global_Sales").aggregate("sum"),
       vl.x().fieldQ("Year").title("Years"),
-      vl.color().fieldN("Genre")
-    )
-    .width("container")
-    .height(400)
+      vl.color().fieldN("Genre"),
+      vl.facet().fieldN("Genre").columns(3)
+    ).width(225)
+    //.width("container")
+    .height(300)
     .toSpec();
 
   const vlSpec3 = vl
-    .markLine()
+    .markArea()
     .title("Global Sales of Platforms from 1980 - 2020")
     .data(data)
     .encode(
       vl.y().fieldQ("Global_Sales").aggregate("sum"),
       vl.x().fieldQ("Year").title("Years"),
-      vl.color().fieldN("Platform")
+      vl.color().fieldN('Platform').scale({scheme: 'spectral'}),
+      vl.tooltip().fieldN('Platform')
     )
     .width("container")
     .height(500)
@@ -104,6 +106,29 @@ async function render() {
     .height(400)
     .toSpec();
 
+    typeof(data[0].Name.includes("Pokemon"))
+    pokemonGames = Array[20]
+    pokemonGames = data.filter((d) => {
+      // Ensure d.name exists and is not null or undefined
+      return typeof(d.Name)==="string" && d.Name.toLowerCase().includes("pokemon") && d.Global_Sales> 20;
+    });
+
+    const vlSpec6 = vl
+    .markBar()
+    .data(pokemonGames)
+    .encode(
+      vl.y().fieldN('Name').title('Pokemon Game').sort('-x'),
+      vl.x().fieldQ('Global_Sales').title('Global Sales (millions)'),
+      vl.color().value('darkgrey').legend(null),
+      vl.tooltip([
+      vl.fieldN('Name'),
+      vl.fieldQ('Global_Sales')
+    ])
+  )
+  .title('Global Sales of Pokemon Games')    .width("container")
+  .height(400)
+  .toSpec();
+
   // PS2, Wii, X360
   // NA_Sales,EU_Sales,JP_Sales,Other_Sales
 
@@ -128,6 +153,11 @@ async function render() {
   });
 
   vegaEmbed("#vis5", vlSpec5).then((result) => {
+    const view = result.view;
+    view.run();
+  });
+
+  vegaEmbed("#vis6", vlSpec6).then((result) => {
     const view = result.view;
     view.run();
   });
