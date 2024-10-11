@@ -35,7 +35,7 @@ for (let i = 0; i < colors.length; i++) {
 async function render() {
   // load data
   const data = await d3.csv("./datasets/videogames_wide.csv");
-  // const dataLong = await d3.csv("./datasets/videogames_wide.csv");
+  const dataLong = await d3.csv("./datasets/videogames_long.csv");
 
   // create a bar chart
   const vlSpec = vl
@@ -56,9 +56,10 @@ async function render() {
     .encode(
       vl.y().fieldQ("Global_Sales").aggregate("sum"),
       vl.x().fieldQ("Year").title("Years"),
-      vl.color().fieldN("Genre"),
+      vl.color().fieldN("Genre").legend(null),
       vl.facet().fieldN("Genre").columns(3)
-    ).width(225)
+    )
+    .width(250)
     //.width("container")
     .height(300)
     .toSpec();
@@ -70,8 +71,8 @@ async function render() {
     .encode(
       vl.y().fieldQ("Global_Sales").aggregate("sum"),
       vl.x().fieldQ("Year").title("Years"),
-      vl.color().fieldN('Platform').scale({scheme: 'spectral'}),
-      vl.tooltip().fieldN('Platform')
+      vl.color().fieldN("Platform").scale({ scheme: "spectral" }),
+      vl.tooltip().fieldN("Platform")
     )
     .width("container")
     .height(500)
@@ -92,42 +93,48 @@ async function render() {
 
   const vlSpec5 = vl
     .markBar()
-    .title("Regional Sales for PS2")
-    .data(data)
+    .title("Regional Sales for each platform")
+    .data(dataLong)
     .encode(
-      vl.y().fieldQ("NA_Sales").stack("EU_Sales"),
-      vl.x().fieldN("Platform"),
-      vl.color().fieldQ("NA_Sales"),
-      vl.color().fieldQ("EU_Sales"),
-      vl.color().fieldQ("JP_Sales"),
-      vl.color().fieldQ("Other_Sales")
+      vl
+        .y()
+        .fieldQ("sales_amount")
+        .aggregate("sum")
+        .title("Games sold (in millions) in each Region"),
+      vl.x().fieldN("sales_region"),
+      vl.color().fieldN("sales_region").legend(null),
+      vl.facet().fieldN("platform").columns(3),
+      vl.tooltip().fieldN("sales_region")
     )
-    .width("container")
+    .width(250)
     .height(400)
     .toSpec();
 
-    typeof(data[0].Name.includes("Pokemon"))
-    pokemonGames = Array[20]
-    pokemonGames = data.filter((d) => {
-      // Ensure d.name exists and is not null or undefined
-      return typeof(d.Name)==="string" && d.Name.toLowerCase().includes("pokemon") && d.Global_Sales> 20;
-    });
+  //typeof(data[0].Name.includes("Pokemon"))
+  pokemonGames = Array[20];
+  pokemonGames = data.filter((d) => {
+    // Ensure d.name exists and is not null or undefined
+    return (
+      typeof d.Name === "string" &&
+      d.Name.toLowerCase().includes("pok") &&
+      d.Global_Sales > 2
+    );
+  });
 
-    const vlSpec6 = vl
-    .markBar()
+  const vlSpec6 = vl
+    .markCircle()
     .data(pokemonGames)
     .encode(
-      vl.y().fieldN('Name').title('Pokemon Game').sort('-x'),
-      vl.x().fieldQ('Global_Sales').title('Global Sales (millions)'),
-      vl.color().value('darkgrey').legend(null),
-      vl.tooltip([
-      vl.fieldN('Name'),
-      vl.fieldQ('Global_Sales')
-    ])
-  )
-  .title('Global Sales of Pokemon Games')    .width("container")
-  .height(400)
-  .toSpec();
+      vl.y().fieldN("Name").title("Pokemon Game").sort("-x"),
+      vl.x().fieldN("Year").title("Year"),
+      vl.size().fieldQ("Global_Sales"),
+      vl.color().fieldQ("Global_Sales").scale({ scheme: "spectral" }),
+      vl.tooltip([vl.fieldN("Name"), vl.fieldQ("Global_Sales")])
+    )
+    .title("Global Sales of Pokemon Games")
+    .width("container")
+    .height(400)
+    .toSpec();
 
   // PS2, Wii, X360
   // NA_Sales,EU_Sales,JP_Sales,Other_Sales
