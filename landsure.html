@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chris chan - LandSure Systems</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="img/icons/github.svg" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+    </style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+    </style>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  </head>
+  <body>
+    <div class="landSureHeroContainer">
+      <div class="navbar" id="topNavbar">
+        <a href="index.html" class="pageTitle">chris chan</a>
+        <div class="mobileNavBorder"></div>
+        <div class="navBorder"></div>
+        <ul>
+          <li><a href="index.html" class="active">my work</a></li>
+          <li><a href="contact.html">contact</a></li>
+          <li><a href="about.html">about</a></li>
+          <li>
+            <a
+              href="javascript:void(0);"
+              class="hamburger"
+              onclick="hamburger()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="flexHero">
+        <div class="flexElement">
+          <div class="nextProject">
+            <a href="hoochybooch.html"><p>Move to Hoochy 'Booch ></p></a>
+          </div>
+          <img
+            class="burbHeroImg"
+            src="img/landsure/landsure_placeholder.svg"
+            alt="landsure_cdf" />
+          <p class="heroCaption">Context-Driven Filing Prototypes</p>
+          <!-- <div class="projInfo"></div> -->
+          <div class="bio">
+            <img
+              src="img/landsure/landsure_logottype.svg"
+              alt="cm logotype-white"
+              class="burbLogotype" />
+            <h1>
+              8 month co-op position working in interdisciplinary teams with the
+              aim of improving user experience of forms and websites for
+              professionals in the geospatial sector.
+            </h1>
+          </div>
+        </div>
+        <div class="mobileScrollTip">
+          <!-- <p>SCROLL</p> -->
+          <img src="img/icons/chevron-down.svg" alt="down_arrow" />
+        </div>
+      </div>
+    </div>
+    <div class="writeUp">
+      <div class="projInfoList">
+        <div class="projInfo">
+          <h3>Title</h3>
+          <p>UX Design/Research Co-op</p>
+        </div>
+        <div class="projInfo">
+          <h3>Client</h3>
+          <p>Land and Survey Authority of BC</p>
+        </div>
+
+        <div class="projInfo">
+          <h3>Tasks</h3>
+          <p>
+            Navigation Streamlining, Heuristic Evaluations, Wireframes and
+            Prototypes
+          </p>
+        </div>
+        <div class="projInfo">
+          <h3>Skills</h3>
+          <p>User Experience Design and Research</p>
+        </div>
+      </div>
+      <!-- <div class="projSection">
+        <h1>Overview</h1>
+        <p class="commentPara">
+          During this internship I worked closely with the Nissan USA UX team
+          working on developing wireframes and prototypes as part of a larger
+          site simplification project. I more specifically focused on the
+          navigation aspect of the website and learned how to leverage tools
+          such as website heatmaps, and results of a tree-testing to make
+          informed design decisions.
+        </p>
+        <div class="comments">
+          <h4>Major Lessons</h4>
+          <p>- Working within the constraints of a dev team</p>
+          <p>- Leveraging tools such as site metrics</p>
+          <p>- Usage of a design system and established branding</p>
+        </div>
+        <p class="commentPara">
+          Throughout my internship I got the chance to attend seminars offered
+          by the wide variety of disciplines available at Critical Mass, as a
+          part of the Trailhead program for developing emerging talent. Through
+          Trailhead I was paired with a mentor for the duration of my
+          internship, and contributed to the winning in-house intern project for
+          the Clara Lione Foundation.
+        </p>
+        <p class="commentPara">
+          I am very proud of my work with Critical Mass however I am unable to
+          display it on my portfolio. If you would like to learn more about it
+          please
+          <a href="contact.html">contact me</a> for a call over Zoom.
+        </p>
+      </div> -->
+    </div>
+
+    <div class="projectGalleryGrid">
+      <h1>See some of my other work -></h1>
+      <!-- <a href="doubleclub.html" class="projectCardLink">
+        <div class="projectCard active">
+          <img src="img/doubleclub/double.jpg" alt="doubleClubHero" />
+          <div class="projDetails">
+            <h3>Double Club Miami</h3>
+            <h4>Summer 2021</h4>
+            <p>Nightclub Ticketing Process</p>
+            <p class="seeMore">See More ></p>
+          </div>
+        </div>
+      </a> -->
+
+      <!-- Empty Space -->
+      <p></p>
+
+      <a href="hoochybooch.html" class="projectCardLink">
+        <div class="projectCardHome active">
+          <img src="img/hoochybooch/heroImg1.png" alt="hoochyBoochHero" />
+          <div class="projDetails">
+            <div class="projDetailsHeader">
+              <h3>Hoochy' Booch Evaluation</h3>
+              <p class="seeMore">See More</p>
+            </div>
+
+            <div class="projAttributes">
+              <div class="pill">
+                <p>E-Commerce</p>
+              </div>
+              <div class="pill">
+                <p>UX Research</p>
+              </div>
+              <div class="pill">
+                <p>Web Design</p>
+              </div>
+            </div>
+            <!-- <h4>Design Evaluation</h4> -->
+            <p>
+              Reducing friction in purchasing process and improving product
+              messaging.
+            </p>
+          </div>
+        </div>
+      </a>
+      <a href="burb.html" class="projectCardLink">
+        <div class="projectCardHome active">
+          <img src="img/burb/burb.jpg" alt="burbHero" />
+          <div class="projDetails">
+            <div class="projDetailsHeader">
+              <h3>Burb</h3>
+              <p class="seeMore">See More</p>
+            </div>
+
+            <div class="projAttributes">
+              <div class="pill">
+                <p>AI Integration</p>
+              </div>
+              <div class="pill">
+                <p>Research</p>
+              </div>
+              <div class="pill">
+                <p>Product Design</p>
+              </div>
+            </div>
+            <p>Helping new cannabis users make informed product choices.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <footer>
+      <a href="index.html" class="pageTitle">chris chan</a>
+      <div class="navLinks">
+        <ul>
+          <li><a href="index.html" class="active">my work</a></li>
+          <li><a href="contact.html">contact</a></li>
+          <li><a href="about.html">about</a></li>
+        </ul>
+      </div>
+      <!-- <div >
+           <p>Email me at <span class="footerEmail"> chaanchriis@gmail.com 📧 </span></p>
+         </div>
+         OR
+         <div class="footerLinkedin">
+           <p>DM me on </p>
+           <a href="https://www.linkedin.com/in/chaanchriis/">LinkedIn</a>
+         </div> -->
+      <div class="socials">
+        <a
+          target="_blank"
+          href="mailto:chaanchriis@gmail.com?subject=Chat&#160;with&#160;Chris"
+          ><img src="img/icons/envelope-solid.svg" alt="email"
+        /></a>
+        <a target="_blank" href="https://www.linkedin.com/in/chaanchriis/"
+          ><img src="img/icons/linkedin.svg" alt="linkedin"
+        /></a>
+        <a href="styleguide.html"
+          ><img src="img/icons/brush-solid.svg" alt="styleGuide"
+        /></a>
+      </div>
+    </footer>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

@@ -336,7 +336,7 @@ body,
 
 .projectGalleryGrid {
   // width: 100%;
-  margin-top: 3.5em;
+  margin-top: 6em;
   padding-bottom: 7em;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1011,6 +1011,14 @@ textarea {
 .boochHeroContainer {
   background: {
     image: url("../img/hoochybooch/heroBg.png");
+  }
+  @include heroBGImg();
+  color: white;
+}
+
+.landSureHeroContainer {
+  background: {
+    image: url("../img/landsure/landsure_heroBg.jpg");
   }
   @include heroBGImg();
   color: white;
