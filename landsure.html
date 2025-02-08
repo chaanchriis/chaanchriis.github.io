@@ -46,7 +46,7 @@
           </div>
           <img
             class="burbHeroImg"
-            src="img/landsure/landsure_placeholder.svg"
+            src="img/landsure/landsure_hero.jpg"
             alt="landsure_cdf" />
           <p class="heroCaption">Context-Driven Filing Prototypes</p>
           <!-- <div class="projInfo"></div> -->
@@ -56,9 +56,11 @@
               alt="cm logotype-white"
               class="burbLogotype" />
             <h1>
-              8 month co-op position working in interdisciplinary teams with the
-              aim of improving user experience of forms and websites for
-              professionals in the geospatial sector.
+              As a user experience design co-op, I led the design and
+              development of the Autofill Templates feature for forms on
+              myLTSA.ca. Over the course of a month I worked alongside a product
+              owner, a developer and received guidance from a senior UX
+              designer.
             </h1>
           </div>
         </div>
@@ -69,59 +71,254 @@
       </div>
     </div>
     <div class="writeUp">
+      <div class="projSection">
+        <h1>LandSure and LTSA</h1>
+        <p>
+          LandSure is a subsidiary of the Land Title and Survey Authority of BC
+          (LTSA). LTSA is responsible for operating the land title and survey
+          systems of BC, while LandSure develops and operates the technology
+          that enables the LTSA to provide its services to the land and property
+          professionals who require it.
+        </p>
+      </div>
       <div class="projInfoList">
         <div class="projInfo">
-          <h3>Title</h3>
-          <p>UX Design/Research Co-op</p>
-        </div>
-        <div class="projInfo">
-          <h3>Client</h3>
-          <p>Land and Survey Authority of BC</p>
+          <h3>Role</h3>
+          <p>
+            I joined this project as the UX designer after research and meetings
+            done by SurveyHub team determined that this feature was to be
+            developed. I conducted interviews to understand user pain points,
+            gave presentations to stakeholders and provided developers with
+            annotated wireframes and prototypes as specifications.
+          </p>
         </div>
 
         <div class="projInfo">
-          <h3>Tasks</h3>
+          <h3>Team</h3>
+          <p>UX Designer, Product Manager, Developer</p>
+        </div>
+        <div class="projInfo">
+          <h3>Toolkit</h3>
+          <p>Axure, Jira</p>
+        </div>
+        <div class="projInfo">
+          <h3>Results</h3>
           <p>
-            Navigation Streamlining, Heuristic Evaluations, Wireframes and
-            Prototypes
+            Received well by land surveyor task force. Google Analytics showed
+            that power users use it all the time when they fill in forms, and
+            new users very quickly figure out how to use it resulting decrease
+            in time spent on pages where the feature was active.
           </p>
         </div>
         <div class="projInfo">
-          <h3>Skills</h3>
-          <p>User Experience Design and Research</p>
+          <h3>Status</h3>
+          <p>
+            Autofill Templates is currently live for use on myLTSA.ca and
+            SurveyHub.
+          </p>
         </div>
       </div>
-      <!-- <div class="projSection">
-        <h1>Overview</h1>
-        <p class="commentPara">
-          During this internship I worked closely with the Nissan USA UX team
-          working on developing wireframes and prototypes as part of a larger
-          site simplification project. I more specifically focused on the
-          navigation aspect of the website and learned how to leverage tools
-          such as website heatmaps, and results of a tree-testing to make
-          informed design decisions.
+
+      <div class="projSection">
+        <h1>Problem with Current Implementation</h1>
+        <p>
+          Pilot users of SurveyHub forms reported that information retrieved
+          from their myLTSA account was not always the correct information to
+          auto-populate in the form because someone filling out a form might not
+          always be filling it out for themselves, or they may work in different
+          offices and require different autofill information. There was an ask
+          from the users and a Jira ticket created for a customizable way to
+          autofill information into forms. This is the point where I was asked
+          to work on this project.
         </p>
-        <div class="comments">
-          <h4>Major Lessons</h4>
-          <p>- Working within the constraints of a dev team</p>
-          <p>- Leveraging tools such as site metrics</p>
-          <p>- Usage of a design system and established branding</p>
+      </div>
+      <div class="projSection">
+        <h1>Research</h1>
+        <p>
+          Speaking to the project manager and UX designer on the SurveyHub
+          project I was able to gather important information about the users and
+          their pain points, as well as project goals.
+        </p>
+
+        <div class="gridContainer3">
+          <h4>Users: Legal Professionals, Land Surveyors, Secretaries</h4>
+          <h4>
+            Pain Point: Fill out dozens of forms a day, it gets repetitive.
+          </h4>
+          <h4>
+            Pain Point: A lot of forms require the same blocks of information,
+            annoying to need to fill it out over and over.
+          </h4>
+          <h4>
+            Pain Point: Current Implementation of autofill does not work for me.
+          </h4>
+          <h4>Goal: Make it faster to fill out forms.</h4>
+          <h4>
+            Goal: I don't want to have to fill in the exact same stuff over and
+            over.
+          </h4>
         </div>
-        <p class="commentPara">
-          Throughout my internship I got the chance to attend seminars offered
-          by the wide variety of disciplines available at Critical Mass, as a
-          part of the Trailhead program for developing emerging talent. Through
-          Trailhead I was paired with a mentor for the duration of my
-          internship, and contributed to the winning in-house intern project for
-          the Clara Lione Foundation.
+        <p>
+          In a meeting with the developer, I was informed that forms on the
+          back-end are built in “blocks” of data that make it easy for them to
+          work with. These blocks of data were reflected in the UI of the forms
+          as sections of form fields in a bounding box. This ended up being very
+          important information because designing around this constraint
+          strongly informed design choices down the line.
         </p>
-        <p class="commentPara">
-          I am very proud of my work with Critical Mass however I am unable to
-          display it on my portfolio. If you would like to learn more about it
-          please
-          <a href="contact.html">contact me</a> for a call over Zoom.
+        <p>INSERT IMAGE OF A SECTION OF A FORM DESCRIBED ABOVE^</p>
+      </div>
+      <div class="projSection">
+        <h1>Borrowing from Other Products</h1>
+        <p>
+          In doing research for different possible solutions, I came across a
+          different piece of enterprise software called eConveyance. In this
+          software, users can save templates for sections of a form. I used this
+          idea as a foundation for my proposed solution.
         </p>
-      </div> -->
+        <p>Show a picture of eConveyancing’s template saving</p>
+
+        <img src="img/hoochybooch/affinity.PNG" alt="" />
+        <p class="imgCaption">Navigation Snippet of Affinity Diagram</p>
+      </div>
+      <div class="projSection">
+        <h1>Initial Proposed Designs</h1>
+        <p>
+          Design and develop an account level feature for users to save
+          templates for different blocks of form data that can be easily and
+          quickly used to auto-populate form fields.
+        </p>
+        <div class="projImgGrid">
+          <div class="flexElement">
+            <img src="img/hoochybooch/survey.PNG" alt="" />
+            <p class="imgCaption">Pre-test survey results</p>
+          </div>
+          <div class="flexElement">
+            <img src="img/hoochybooch/heval.PNG" alt="" />
+            <p class="imgCaption">Heuristic Evaluation</p>
+          </div>
+          <div class="flexElement">
+            <img src="img/hoochybooch/zoom.png" alt="" />
+            <p class="imgCaption">User Testing over Zoom</p>
+          </div>
+          <div class="flexElement">
+            <img src="img/hoochybooch/post-test.png" alt="" />
+            <p class="imgCaption">Post-test survey results</p>
+          </div>
+        </div>
+
+        <div class="colContainer">
+          <h3>Problem Solving</h3>
+          <div>
+            <h5>How do we identify unique datablocks?</h5>
+            <p>
+              We went through different options such as giving a preview of the
+              saved fields, nicknames. And if we had nicknames should we suggest
+              a naming convention to make it easy to remember?
+            </p>
+          </div>
+          <div>
+            <h5>List vs Grid Layout for Manage Page</h5>
+            <p>
+              Choosing between a list or a grid layout for the "Manage
+              Datablocks" page, required going through the pros and cons of
+              each.
+            </p>
+            <div class="projImgGrid">
+              <div class="flexElement">
+                <img src="img/hoochybooch/survey.PNG" alt="" />
+                <p class="imgCaption">Pre-test survey results</p>
+              </div>
+              <div class="flexElement">
+                <img src="img/hoochybooch/heval.PNG" alt="" />
+                <p class="imgCaption">Heuristic Evaluation</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="projSection">
+        <h1>Requirements Change</h1>
+        <p>
+          While working through the problems I had found, project requirements
+          changed where instead of a full feature, an MVP was asked for instead
+          because of low development capacity. Instead of working on a page to
+          centrally manage the datablock templates within the account management
+          of the site which would require developing a whole new webpage, I was
+          asked to keep everything on the form page instead. I was also only
+          required to make the BC Land Surveyor datablock work as a proof of
+          concept which meant that I did not need to go through all of the
+          different possible datablocks that forms could have. This required me
+          to adapt some of my early designs. Mainly finding a way for users to
+          manage their datablocks within the form page.
+        </p>
+
+        <p>Switching from account level feature to form level feature.</p>
+      </div>
+      <div class="projSection">
+        <h1>Final Proposed Solution</h1>
+        <p>Presented to SurveyHub team and stakeholders.</p>
+        <div class="projImgGrid">
+          <div class="flexElement">
+            <img src="img/hoochybooch/survey.PNG" alt="" />
+            <p class="imgCaption">
+              Load or Save and autofill template directly in the form
+            </p>
+          </div>
+          <div class="flexElement">
+            <img src="img/hoochybooch/heval.PNG" alt="" />
+            <p class="imgCaption">Load Autofill Template modal</p>
+          </div>
+          <div class="flexElement">
+            <img src="img/hoochybooch/zoom.png" alt="" />
+            <p class="imgCaption">Save Autofill Template modal</p>
+          </div>
+          <div class="flexElement">
+            <img src="img/hoochybooch/post-test.png" alt="" />
+            <p class="imgCaption">Successfully saved/loaded toast message</p>
+          </div>
+        </div>
+
+        <div class="colContainer">
+          <h3>Specifications for developer handoff</h3>
+          <div>
+            <img src="img/hoochybooch/oldNav.png" alt="old nav bar" />
+            <p class="imgCaption">Load Template Specifications</p>
+            <img src="img/hoochybooch/newNav.png" alt="new nav bar" />
+            <p class="imgCaption">Save Template Specifications</p>
+          </div>
+        </div>
+        <div class="projSection">
+          <h1>Reflection</h1>
+          <p>
+            The challenge of pivoting the scope and size of the project based on
+            changing development capacity provided an opportunity for me to
+            develop my adaptability and problem solving skills. Ensuring the
+            work I had already done would not be wasted and could be repurposed
+            within the new requirements of the project.
+          </p>
+          <p>
+            Lesson: How if you are having issues with a lot of problems at once,
+            if you solve one of them, or even just make a decision on something
+            if its a close 50/50, it CAN help a lot with solving the rest of the
+            issues. For example, when deciding between using nicknames for the
+            templates or showing a preview, I was not really too sure because in
+            my head, both options had its pros and cons. But I decided to go
+            with the nicknames it also helped me decide to go with a list layout
+            instead of a grid.
+          </p>
+          <p>
+            Lesson: You can help your users TOO MUCH as a designer, or at the
+            very least, there is room for you to let your users figure it out
+            themselves (trimmed down final version of modals)
+          </p>
+          <p>
+            Lesson: Learning about how the back-end works and speaking to the
+            developers can greatly inform the best ways for you to design
+            something.
+          </p>
+        </div>
+      </div>
     </div>
 
     <div class="projectGalleryGrid">

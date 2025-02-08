@@ -83,7 +83,7 @@ p {
 
 * {
   font-family: "Inter", "sans-serif";
-  letter-spacing: -0.05em;
+  letter-spacing: -0.04em;
   box-sizing: border-box;
   // overflow: visible;
   /* max-width: 1280px; */
@@ -826,7 +826,7 @@ textarea {
   margin-top: 3em;
   margin-bottom: 5em;
   padding-bottom: 3.5em;
-  font-size: 1.3em;
+  font-size: 1.25em;
   padding-left: 4em;
   padding-right: 4em;
   display: flex;
@@ -862,7 +862,7 @@ textarea {
 .projInfo {
   display: flex;
   flex-direction: row;
-  border-bottom: 2px solid var(--row-color);
+  //border-bottom: 2px solid var(--row-color);
   /* padding-top: 0; */
 }
 
