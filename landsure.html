@@ -106,7 +106,7 @@
 
 
       <div class="projSection">
-        <h1>What is LandSure?</h1>
+        <h1>0. What is LandSure?</h1>
         <p>
           LandSure Systems, a technology subsidiary of the Land Title and Survey
           Authority of BC (LTSA), develops software to facilitate land and
@@ -122,7 +122,7 @@
 
 
       <div class="projSection">
-        <h1>The Problem</h1>
+        <h1>1. The Problem</h1>
         <p>
           Frequent users of myLTSA, such as legal secretaries and land
           surveyors, faced a high cognitive load due to repetitive data entry.
@@ -134,11 +134,14 @@
           How might we reduce cognitive load for power users who submit multiple
           forms daily?
         </h3>
+        <p>In UX projects I like to use the double diamond method to guide me along the path of finding the right solution for my users, and then designing that solution right. </p>
+        <img src="img/landsure/doublediamond.png" alt="" />
+        <p class="imgCaption">Double Diamond Design Process</p>
       </div>
 
 
       <div class="projSection">
-        <h1>User Research</h1>
+        <h1>2. User Research</h1>
         <p>
           Through user interviews and usability testing, I identified two key
           pain points:
@@ -170,7 +173,7 @@
 
 
       <div class="projSection">
-        <h1>Solution Exploration</h1>
+        <h1>3. Solution Exploration</h1>
         <p>
           To get inspiration for an optimal solution, I researched existing
           form/survey and document filling options. I came across
@@ -206,7 +209,7 @@
 
 
       <div class="projSection">
-        <h1>Design Process</h1>
+        <h1>4. Design Process</h1>
         <p>
           With the solution direction decided, I focused on designing a feature
           that would seamlessly integrate into the existing myLTSA workflow
@@ -214,7 +217,7 @@
           errors. Here’s how I approached the design:
         </p>
         <div class="colContainer">
-          <h3>Collaboration with my Team</h3>
+          <h3>4.1. Collaboration with my Team</h3>
           <h5>Template Structure</h5>
           <p>
             Early on I met with a developer. He explained that sections of a
@@ -223,8 +226,8 @@
             designed templates to align with these groupings, ensuring that
             saved data blocks would map cleanly to the form fields.
           </p>
-          <img src="" alt="" />
-          <p class="imgCaption">IMAGE OF a form block</p>
+          <!-- <img src="" alt="" />
+          <p class="imgCaption">IMAGE OF a form block</p> -->
           <h5>Identifying Possible Templates</h5>
           <p>
             Since form sections were already grouped, I worked with the project
@@ -240,7 +243,7 @@
             2. Templates must be accessible directly within the form, without
             leaving the page.
           </p> -->
-          <h3>Design Decisions</h3>
+          <h3>4.2. Design Decisions</h3>
           <h5>Modals</h5>
           <p>
             To ensure users stayed on the same page while creating or loading
@@ -264,57 +267,52 @@
               <p class="imgCaption">Load Modal</p>
             </div>
           </div>
-          <h3>Scope Change and Adaptations</h3>
+          <h3>4.3. Scope Change and Adaptations</h3>
           <p>
             Midway through the project, development capacity was reduced,
             forcing a pivot in scope. The dedicated "Manage Autofill Templates"
             page was cut, and all functionality needed to be integrated directly
             into the form pages.
           </p>
-          <h5>Adapting the Design</h5>
-          <p>
-            I reworked the design to ensure all functionality (create, load,
-            edit) could occur within the form pages. I introduced a slide-in
-            panel for loading templates, which provided more space for users to
-            view template details without leaving the form.
-          </p>
-          <div class="projImgGrid">
-            <div class="flexElement">
-              <img src="" alt="" />
-              <p class="imgCaption">Slide-in Panel</p>
-            </div>
-            <div class="flexElement">
-              <img src="" alt="" />
-              <p class="imgCaption">Edit a Autofill Template</p>
-            </div>
-
-          </div>
           <h5>Maintaining Usability</h5>
           <p>
             Despite the reduced scope, I focused on keeping the feature intuitive and easy to use. By integrating editing and deleting functionality directly into the load flow, users could still manage their templates efficiently without needing a separate page.
           </p>
-        </div>
-        <div class="projImgGrid">
-          <div class="flexElement">
-            <img src="" alt="" />
-            <p class="imgCaption">Delete and Edit within Load</p>
+          <div class="projImgGrid">
+            <div class="flexElement">
+              <img src="img/landsure/loadAndSaveButton.jpg" alt="" />
+              <p class="imgCaption">CTA's on the Form page</p>
+            </div>
+            <div class="flexElement">
+              <img src="img/landsure/toastMessage.jpg" alt="" />
+              <p class="imgCaption">Keep Users Updated with System Status</p>
+            </div>
+            <div class="flexElement">
+              <img src="img/landsure/loadWithEditDelete.jpg" alt="" />
+              <p class="imgCaption">Delete and Edit within Load Modal</p>
+            </div>
+            <div class="flexElement">
+              <img src="img/landsure/editModal.jpg" alt="" />
+              <p class="imgCaption">Editing within Load Modal</p>
+            </div>
           </div>
-          <div class="flexElement">
-            <img src="" alt="" />
-            <p class="imgCaption">Heuristic Evaluation</p>
-          </div>
+          <h5>Removing Unnecessary Features</h5>
+          <p>
+            I also worked to consider what I could cut from the design to because of development capacity constraints. After doing some research and chatting with more senior UX designers on my team, I decided that I would also be able to remove editing the Autofill Templates since deleting and creating a new Autofill Template could be done quickly. 
+          </p>
 
         </div>
+
       </div>
 
 
       <div class="projSection">
-        <h1>Autofill Templates Prototype Demo</h1>
+        <h1>5. Autofill Templates Prototype Demo</h1>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/UrENnWf1Cu0?si=-36Ga5q5EgOR4w1y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
 
       <div class="projSection">
-        <h1>Results</h1>
+        <h1>6. Results</h1>
         <div class="colContainer">
           <h5>Usability Testing Feedback</h5>
           <p>
@@ -345,21 +343,14 @@
         <p>These were made for developers in Axure with annotations specifying UI behaviours and any conditional elements.</p>
         <div class="projImgGrid">
           <div class="flexElement">
-            <img src="" alt="" />
-            <p class="imgCaption">Pre-test survey results</p>
+            <img src="img/landsure/saveModalSpecs.PNG" alt="" />
+            <p class="imgCaption">Save Modal Dev Specs</p>
           </div>
           <div class="flexElement">
-            <img src="" alt="" />
-            <p class="imgCaption">Heuristic Evaluation</p>
+            <img src="img/landsure/loadModalSpecs.PNG" alt="" />
+            <p class="imgCaption">Load Modal Dev Specs</p>
           </div>
-          <div class="flexElement">
-            <img src="" alt="" />
-            <p class="imgCaption">User Testing over Zoom</p>
-          </div>
-          <div class="flexElement">
-            <img src="" alt="" />
-            <p class="imgCaption">Post-test survey results</p>
-          </div>
+
         </div> 
       </div>
 
