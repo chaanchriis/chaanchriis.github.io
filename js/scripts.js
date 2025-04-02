@@ -57,11 +57,11 @@ mountainButton.addEventListener("click", () => {
 // }
 
 //hamburger menu
-function hamburger() {
-  var x = document.getElementById("topNavbar");
-  if (x.className === "navbar") {
-    x.className += " responsive";
-  } else {
-    x.className = "navbar";
-  }
-}
+// function hamburger() {
+//   var x = document.getElementById("topNavbar");
+//   if (x.className === "navbar") {
+//     x.className += " responsive";
+//   } else {
+//     x.className = "navbar";
+//   }
+// }

@@ -14,30 +14,28 @@
 
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   </head>
   <body>
+    <div class="navbar">
+      <a href="index.html" class="pageTitle">CC.</a>
+      <ul>
+        <li>
+          <a
+            target="_blank"
+            href="https://docs.google.com/document/d/1IvztMu1zYF094CQQekLHHw-UntRd7riNRmQNcL88SWk/edit?usp=sharing"
+            >Resume</a
+          >
+        </li>
+        <li><a href="about.html">About</a></li>
+        <!-- <li>
+          <a href="javascript:void(0);" class="hamburger" onclick="hamburger()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </li> -->
+      </ul>
+    </div>
     <div class="aboutHeroContainer">
-      <div class="navbar" id="topNavbar">
-        <a href="index.html" class="pageTitle">chris chan</a>
-        <div class="mobileNavBorder"></div>
-        <div class="navBorder"></div>
-        <ul>
-          <li><a href="index.html">my work</a></li>
-          <li><a href="contact.html" class="active">contact</a></li>
-          <li><a href="about.html">about</a></li>
-          <li>
-            <a
-              href="javascript:void(0);"
-              class="hamburger"
-              onclick="hamburger()"
-            >
-              <i class="fa fa-bars"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
       <div class="flexHero">
         <h1 class="styleguideHeader">Contact Me.</h1>
         <div class="flexContainerCol">
@@ -45,13 +43,11 @@
             action="https://formsubmit.co/chaanchriis@gmail.com"
             method="POST"
             class="sgGridForm"
-            autocomplete="off"
-          >
+            autocomplete="off">
             <input
               type="hidden"
               name="_next"
-              value="http://127.0.0.1:5500/thankyou.html"
-            />
+              value="http://127.0.0.1:5500/thankyou.html" />
 
             <h3>Send me a message and we can chat!</h3>
             <div class="formGroup"></div>
@@ -62,8 +58,7 @@
                   type="text"
                   id="fullName"
                   name="name"
-                  placeholder="Full Name..."
-                />
+                  placeholder="Full Name..." />
               </div>
             </div>
             <div class="formGroup">
@@ -73,8 +68,7 @@
                   type="text"
                   id="email"
                   name="email"
-                  placeholder="Your Email..."
-                />
+                  placeholder="Your Email..." />
               </div>
             </div>
 
@@ -87,8 +81,7 @@
                   class="textarea"
                   maxlength="3000"
                   rows="5"
-                  placeholder="Write your message here..."
-                ></textarea>
+                  placeholder="Write your message here..."></textarea>
               </div>
             </div>
             <div class="formGroup">
